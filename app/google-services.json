@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "664811341466",
+    "firebase_url": "https://devchatapp-b6676.firebaseio.com",
+    "project_id": "devchatapp-b6676",
+    "storage_bucket": "devchatapp-b6676.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664811341466:android:08006c5b5cad570b",
+        "android_client_info": {
+          "package_name": "yassine.com.devchatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664811341466-nboh7onmfgobdqbhn6198hbh6c4orqgg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "yassine.com.devchatapp",
+            "certificate_hash": "dbc277c5a183b7704e16609db8880ab322f47cf7"
+          }
+        },
+        {
+          "client_id": "664811341466-hra989pfq9kep81523b5289cc2gothen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxVbFMDHpw3Ckx-KjLTMSjRv5na3oHRaI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664811341466-hra989pfq9kep81523b5289cc2gothen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

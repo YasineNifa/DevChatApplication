@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+
+    tools:context="yassine.com.devchatapp.LoginActivity">
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id ="@+id/login_toolbar">
+    </include>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/dev"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_action_uuser"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textMultiLine|textEmailAddress"
+        android:textColor="@android:color/background_light"/>
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/login_email"
+        android:layout_below="@+id/login_email"
+        android:layout_marginTop="42dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_action_passs"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textMultiLine|textPassword"
+        android:textColor="@android:color/background_light"/>
+
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:background="@color/colorPrimary"
+        android:text="Log in"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>
