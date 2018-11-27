@@ -1,10 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context="yassine.com.devchatapp.SettingsActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setting_profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:src="@drawable/default_profile">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/setting_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/setting_user_status"
+        android:layout_below="@+id/setting_profile_image"
+        android:layout_marginTop="61dp"
+        android:gravity="center"
+        android:text="UserName"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/setting_user_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setting_user_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:text="User Profil Status"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp"/>
+
+
+    <Button
+        android:id="@+id/setting_change_profile_image"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/setting_change_status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorPrimaryDark"
+        android:drawableLeft="@drawable/ic_action_photo"
+        android:gravity="center"
+        android:text="Change image"
+        android:textColor="#fff"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/setting_change_status"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:text="Change Status"
+        />
+
+
+</RelativeLayout>
