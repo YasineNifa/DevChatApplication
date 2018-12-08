@@ -1,10 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context="yassine.com.devchatapp.ProfileActivity">
+    <ImageView
+        android:id="@+id/profile_visit_user_image"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:src="@drawable/default_profile"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/profile_visit_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profile_visit_user_image"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Display Username"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/profile_visit_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profile_visit_username"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:text="Display UserStatus"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/profile_visit_send_request_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_visit_status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:background="@color/colorPrimaryDark"
+        android:drawableLeft="@drawable/ic_action_new_user"
+        android:gravity="center"
+        android:text="Add Friend"
+        android:textColor="#fff"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/profile_decline_request_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/profile_visit_send_request_button"
+        android:layout_below="@+id/profile_visit_send_request_button"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light"
+        android:gravity="center"
+        android:text="Remove"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"/>
+
+
+
+</RelativeLayout>
