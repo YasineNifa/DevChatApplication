@@ -81,13 +81,24 @@ public class LoginActivity extends AppCompatActivity {
                     if(task.isSuccessful()){
                         String online_user_id = mAuth.getCurrentUser().getUid();
                         String DeviceToken = FirebaseInstanceId.getInstance().getToken();
-                        usersreference.child(online_user_id).child("device_token").setValue(DeviceToken).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        /*usersreference.child(online_user_id).child("device_token").setValue(DeviceToken).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Intent mainIntent = new Intent(LoginActivity.this,MainActivity.class);
                                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(mainIntent);
                                 finish();
+                            }
+                        });*/
+                        usersreference.child(online_user_id).child("device_token").setValue(DeviceToken).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Intent mainIntent = new Intent(LoginActivity.this,MainActivity.class);
+                                    mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(mainIntent);
+                                    finish();
+                                }
                             }
                         });
 

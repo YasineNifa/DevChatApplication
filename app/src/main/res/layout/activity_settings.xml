@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+
     tools:context="yassine.com.devchatapp.SettingsActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -15,61 +15,85 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
+        app:civ_border_color="@color/input"
+        app:civ_border_width="5dp"
         android:src="@drawable/default_profile">
 
     </de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
         android:id="@+id/setting_user_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/setting_user_status"
         android:layout_below="@+id/setting_profile_image"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/ic_action_name"
         android:gravity="center"
         android:text="UserName"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/colorAccent"
         android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/setting_user_status"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/input"
         android:layout_below="@+id/setting_user_name"
         android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/status"
+        android:textAlignment="center"
+        android:textStyle="bold"
         android:layout_marginTop="17dp"
         android:gravity="center"
         android:text="User Profil Status"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/colorAccent"
         android:textSize="14sp"/>
 
 
     <Button
         android:id="@+id/setting_change_profile_image"
-        android:layout_width="155dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_above="@+id/setting_change_status"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="17dp"
         android:background="@color/colorPrimaryDark"
         android:drawableLeft="@drawable/ic_action_photo"
         android:gravity="center"
+        android:textAlignment="center"
+
+        android:textStyle="bold"
         android:text="Change image"
         android:textColor="#fff"
         android:textSize="18sp"/>
 
     <Button
         android:id="@+id/setting_change_status"
-        android:layout_width="155dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
         android:layout_centerHorizontal="true"
         android:textSize="18sp"
         android:gravity="center"
-        android:background="@android:color/background_light"
+        android:layout_marginBottom="17dp"
+        android:background="@color/inp"
         android:textColor="@android:color/background_dark"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="14dp"
         android:text="Change Status"
+
         />
 
 

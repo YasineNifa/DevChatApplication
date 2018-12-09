@@ -17,12 +17,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
+        android:layout_width="250dp"
         android:layout_height="150dp"
-        android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/dev"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/login_email"
+        android:layout_below="@+id/login_toolbar"
+        android:layout_marginTop="26dp"
+        app:srcCompat="@drawable/login_photo"/>
 
     <EditText
         android:id="@+id/login_email"
@@ -30,7 +30,7 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="#11000000"
+        android:background="@drawable/input"
         android:drawableLeft="@drawable/ic_action_uuser"
         android:ems="10"
         android:hint="Email"
@@ -44,7 +44,7 @@
         android:layout_alignStart="@+id/login_email"
         android:layout_below="@+id/login_email"
         android:layout_marginTop="42dp"
-        android:background="#11000000"
+        android:background="@drawable/input"
         android:drawableLeft="@drawable/ic_action_passs"
         android:ems="10"
         android:hint="Password"

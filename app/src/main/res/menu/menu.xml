@@ -7,6 +7,11 @@
         android:drawableRight="@drawable/ic_action_setting"
         app:showAsAction ="never">
     </item>
+    <item
+        android:title="Create Group"
+        android:id="@+id/main_create_groupe_button"
+        app:showAsAction ="never">
+    </item>
 
     <item
         android:title="All Users"

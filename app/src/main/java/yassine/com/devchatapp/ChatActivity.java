@@ -67,6 +67,7 @@ public class ChatActivity extends AppCompatActivity {
     private static int Gallery_Pick = 1;
     private StorageReference MessageImageStorageRef;
     private ProgressDialog LoadingBar;
+
     //private  ImageButton imageProfil;
 
     @Override
@@ -113,6 +114,7 @@ public class ChatActivity extends AppCompatActivity {
         usermessageslist.setAdapter(messageAdapter);
         userNameTitle.setText(messageReceiverName);
         FetchMessages();
+
         rootRef.child("Users").child(messageReceiverId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -235,6 +237,8 @@ public class ChatActivity extends AppCompatActivity {
                 messageList.add(messages);
                 messageAdapter.notifyDataSetChanged();
 
+                usermessageslist.smoothScrollToPosition(usermessageslist.getAdapter().getItemCount());
+
             }
 
             @Override
@@ -289,11 +293,6 @@ public class ChatActivity extends AppCompatActivity {
                     InputMessageText.setText("");
                 }
             });
-
-
-
         }
     }
-
-
 }

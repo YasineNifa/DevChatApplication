@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#3468d7</color>
     <color name="colorAccent">#313335</color>
     <color name="colorMessage">#2faa44</color>
+    <color name="input">#1e1e33</color>
+    <color name="inp">#cecece</color>
 </resources>

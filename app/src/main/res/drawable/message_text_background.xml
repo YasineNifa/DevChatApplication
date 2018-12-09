@@ -8,9 +8,10 @@
         android:angle="45"
         android:centerX="50%"
         android:centerY="10%"
-        android:endColor="#01f1fa"
+        android:endColor="#96a0a9"
         android:gradientRadius="50%p"
-        android:startColor="#0189ff"
+        android:startColor="#cecece"
+
         android:type="linear" />
 
 

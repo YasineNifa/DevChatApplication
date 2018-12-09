@@ -324,7 +324,7 @@ public class ProfileActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                HashMap<String, String> notificationsData = new HashMap<String, String>();
+                                HashMap<String, String> notificationsData = new HashMap<>();
                                 notificationsData.put("from",sender_user_id);
                                 notificationsData.put("type", "request");
 
