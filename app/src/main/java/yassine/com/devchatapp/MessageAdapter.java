@@ -96,24 +96,25 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             holder.receivermessageText.setVisibility(View.INVISIBLE);
             holder.receiverProfileImage.setVisibility(View.INVISIBLE);
             holder.sendermessageText.setVisibility(View.INVISIBLE);
-            holder.messagePicture.setVisibility(View.INVISIBLE);
+            holder.sendermessagePicture.setVisibility(View.INVISIBLE);
+            holder.receivermessagePicture.setVisibility(View.INVISIBLE);
 
             if(message_sender_id.equals(fromUserId)){
                 holder.receiverProfileImage.setVisibility(View.INVISIBLE);
-                holder.messagePicture.setVisibility(View.VISIBLE);
-                holder.messagePicture.setPadding(0,0,0,0);
+                holder.sendermessagePicture.setVisibility(View.VISIBLE);
+                holder.sendermessagePicture.setPadding(0,0,0,0);
                 holder.sendermessageText.setBackgroundResource(R.drawable.sender_messages_layout);
-                Picasso.get().load(messages.getMessage()).placeholder(R.drawable.default_profile).into(holder.messagePicture);
+                Picasso.get().load(messages.getMessage()).placeholder(R.drawable.default_profile).into(holder.sendermessagePicture);
                 //holder.messagePicture.setBackgroundResource(R.drawable.message_text_background_t);
 
             }
             else{
                 holder.receiverProfileImage.setVisibility(View.VISIBLE);
-                holder.messagePicture.setVisibility(View.VISIBLE);
+                holder.receivermessagePicture.setVisibility(View.VISIBLE);
                 //holder.receiverProfileImage.setBackground(R.drawable.receiver_msg_layout);
-                holder.messagePicture.setPadding(0,0,0,0);
+                holder.receivermessagePicture.setPadding(0,0,0,0);
                 holder.receivermessageText.setBackgroundResource(R.drawable.receiver_msg_layout);
-                Picasso.get().load(messages.getMessage()).placeholder(R.drawable.default_profile).into(holder.messagePicture);
+                Picasso.get().load(messages.getMessage()).placeholder(R.drawable.default_profile).into(holder.receivermessagePicture);
 
 
                 //holder.messagePicture.setBackgroundResource(R.drawable.message_text_background);
@@ -136,13 +137,15 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     public class MessageViewHolder extends RecyclerView.ViewHolder{
         public TextView sendermessageText,receivermessageText;
         public CircleImageView receiverProfileImage;
-        public ImageView messagePicture;
+        public ImageView sendermessagePicture;
+        public ImageView receivermessagePicture;
 
         public MessageViewHolder(View view){
             super(view);
             sendermessageText = (TextView) view.findViewById(R.id.sender_message_text);
             receivermessageText= (TextView) view.findViewById(R.id.receiver_message_text);
-            messagePicture = (ImageView) view.findViewById(R.id.message_image);
+            sendermessagePicture = (ImageView) view.findViewById(R.id.sender_message_image);
+            receivermessagePicture = (ImageView) view.findViewById(R.id.receiver_message_image);
             receiverProfileImage = (CircleImageView)view.findViewById(R.id.message_profile_image);
         }
     }

@@ -6,4 +6,12 @@
     <color name="colorMessage">#2faa44</color>
     <color name="input">#1e1e33</color>
     <color name="inp">#cecece</color>
+    <color name="walkthrough2formBg">#f1f5f8</color>
+    <color name="walkthrough2colorAccent">#ea2064</color>
+    <color name="button_white">@android:color/white</color>
+    <color name="button_magenta">#ea2064</color>
+    <color name="button_orange">#fe5824</color>
+    <color name="LoginSignup2colorAccent">#fe5824</color>
+    <color name="loginSignup2InputBg">#f1f5f8</color>
+    <color name="loginSignup1colorAccent">#fe5824</color>
 </resources>

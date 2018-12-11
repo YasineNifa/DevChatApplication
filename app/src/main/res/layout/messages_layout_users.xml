@@ -42,11 +42,23 @@
         android:textColor="@android:color/black"/>
 
     <ImageView
-        android:id="@+id/message_image"
+        android:id="@+id/receiver_message_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/message_profile_image"
+        android:layout_toEndOf="@+id/message_profile_image"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop"/>
+    <ImageView
+        android:id="@+id/sender_message_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="@+id/receiver_message_image"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
         android:scaleType="centerCrop"/>
 </RelativeLayout>

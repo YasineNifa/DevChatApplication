@@ -33,12 +33,12 @@
         android:orientation="horizontal"
         android:padding="5dp">
 
-        <ImageButton
+        <!--<ImageButton
             android:id="@+id/select_image"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:src="@drawable/ic_select_image_to_send"/>
+            android:src="@drawable/ic_select_image_to_send"/>-->
 
         <EditText
             android:id="@+id/input_msg"

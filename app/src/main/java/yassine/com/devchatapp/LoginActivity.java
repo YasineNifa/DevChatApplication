@@ -38,15 +38,16 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         usersreference = FirebaseDatabase.getInstance().getReference().child("Users");
 
-        mToolbar = (Toolbar)findViewById(R.id.login_toolbar);
+       /*mToolbar = (Toolbar)findViewById(R.id.login_toolbar);
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Sign in");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+*/
         loginButton = (Button)findViewById(R.id.login_button);
         loginEmail = (EditText)findViewById(R.id.login_email);
         loginPassword= (EditText)findViewById(R.id.login_password);
         loadingBar = new ProgressDialog(this);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Sign in");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

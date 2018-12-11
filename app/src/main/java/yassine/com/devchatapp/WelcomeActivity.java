@@ -1,37 +1,82 @@
 package yassine.com.devchatapp;
 
 import android.content.Intent;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Space;
+import android.widget.Toast;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button NeedNewAcoountButton;
+    private Button AlreadyHaveAccountButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        Thread thread = new Thread(){
-            public void run(){
-                try {
-                    sleep(3000);
-                }
-                catch(Exception e){
-                    e.printStackTrace();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowTitleEnabled(false);
+        }
 
-                }
-                finally{
-                    Intent mainIntent = new Intent(WelcomeActivity.this, StartPageActivity.class);
-                    startActivity(mainIntent);
-                    finish();
+        // ADD SPACE TOP DRAWER ON LOLLIPOP AND UP
+        final NavigationView navigationViewLeft = (NavigationView) findViewById(R.id.nav_view);
+        View navLeftLay = navigationViewLeft.getHeaderView(0);
+        Space spaceLeftTop = (Space) navLeftLay.findViewById(R.id.spaceLeftTop);
+        int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+        if (currentapiVersion >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            spaceLeftTop.setVisibility(View.VISIBLE);
+        }
 
-                }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NeedNewAcoountButton = (Button) findViewById(R.id.btnSignUp);
+        AlreadyHaveAccountButton = (Button) findViewById(R.id.btnSignIn);
+        NeedNewAcoountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent RegisterIntent  = new Intent(WelcomeActivity.this, RegisterActivity.class);
+                startActivity(RegisterIntent);
+
             }
-        };
-        thread.start();
+        });
+        AlreadyHaveAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent LogIntent = new Intent(WelcomeActivity.this,LoginActivity.class);
+                startActivity(LogIntent);
+
+
+            }
+        });
     }
+
     @Override
-    protected void onPause() {
-        super.onPause();
-        finish();
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnLoginSignupBack:
+                onBackPressed();
+                break;
+            case R.id.btnSignIn:
+                Toast.makeText(this, "Button Sign In clicked!", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnSignUp:
+                Toast.makeText(this, "Button Sign Up clicked!", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
     }
 }

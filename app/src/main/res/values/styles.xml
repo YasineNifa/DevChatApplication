@@ -8,5 +8,43 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog"></style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="ButtonWhite" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_white</item>
+    </style>
+    <style name="ButtonMagenta" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_magenta</item>
+    </style>
+    <style name="MainMenuLeftButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="LoginSignUp2Input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@color/loginSignup2InputBg</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textCursorDrawable">@drawable/loginsignup_color_cursor</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ButtonOrange" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/button_orange</item>
+    </style>
+
 
 </resources>

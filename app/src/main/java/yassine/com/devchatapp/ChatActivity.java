@@ -102,7 +102,7 @@ public class ChatActivity extends AppCompatActivity {
         userChatProfileImage = (CircleImageView)findViewById(R.id.custom_profile_image);
 
         SendMessageButton = (ImageButton)findViewById(R.id.send_message_btn);
-        SelectImageButton = (ImageButton)findViewById(R.id.select_image);
+        /*SelectImageButton = (ImageButton)findViewById(R.id.select_image);*/
         //imageProfil = (ImageView)findViewById(R.id.custom_profile_image);
         InputMessageText = (EditText)findViewById(R.id.input_msg);
 
@@ -158,15 +158,15 @@ public class ChatActivity extends AppCompatActivity {
                 SendMessage();
             }
         });
-        SelectImageButton.setOnClickListener(new View.OnClickListener() {
+        /*SelectImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent galleryIntent = new Intent();
                 galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-                galleryIntent.setType("image/*");
+                galleryIntent.setType("image*//*");
                 startActivityForResult(galleryIntent, Gallery_Pick);
             }
-        });
+        });*/
 
     }
 
